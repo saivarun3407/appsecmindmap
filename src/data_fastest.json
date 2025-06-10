@@ -13,12 +13,13 @@
     },
     {
       "name": "Programming Foundations",
-      "description": "Learn to automate—vital for testing, parsing logs, and later exploit development.",
+      "description": "If you can be read and understand code that should be good, ever=n better if you can write it.",
       "children": [
         { "name": "Python Core", "description": "Variables, loops, functions, error handling, virtual environments." },
-        { "name": "Bash Essentials", "description": "Pipelines, grep/sed/awk, cron jobs, shell variables." },
-        { "name": "Git & Version Control", "description": "git init/clone, branching, pull requests, resolving merge conflicts." },
-        { "name": "Project – Log Analyzer", "description": "Write a Python script that ingests Apache logs and outputs top 10 IPs, paths, and error codes." }
+        { "name": "JavaScript Basics", "description": "Variables, functions, async/await, JSON, Node.js basics." },
+        { "name": "Secure-code review", "description": "Practice source code review" },
+        { "name": "Git & Version Control", "description": "git init/clone, branching, pull requests, resolving merge conflicts." }
+        
       ]
     },
     {
