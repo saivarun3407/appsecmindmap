@@ -1,0 +1,279 @@
+# How to Edit Your Mind Map Data (data.json)
+
+Below are clear examples for each scenario. Use these as a guide for editing your data.json file. Do not add comments inside data.json—only use this file for instructions.
+
+---
+
+## 1. Add a New Main Topic
+
+Paste a new object inside the top-level "children" array (after the last main topic, but before the closing brackets):
+
+```json
+{
+  "name": "Application Security",
+  "children": [
+    {
+      "name": "Threat Modeling",
+      "description": "Identify and mitigate threats early.",
+      "children": [
+        { "name": "Sub-Topic A", "description": "Details for A" },
+        { "name": "Sub-Topic B", "description": "Details for B" },
+        { "name": "Sub-Topic C", "description": "Details for C" },
+        { "name": "Sub-Topic D", "description": "Details for D" },
+        { "name": "Sub-Topic E", "description": "Details for E" },
+        { "name": "Sub-Topic F", "description": "Details for F" }
+      ]
+    },
+    {
+      "name": "Secure Coding",
+      "description": "Best practices for secure code.",
+      "children": [
+        { "name": "Sub-Topic A", "description": "Details for A" },
+        { "name": "Sub-Topic B", "description": "Details for B" },
+        { "name": "Sub-Topic C", "description": "Details for C" },
+        { "name": "Sub-Topic D", "description": "Details for D" },
+        { "name": "Sub-Topic E", "description": "Details for E" },
+        { "name": "Sub-Topic F", "description": "Details for F" }
+      ]
+    },
+    {
+      "name": "New Main Topic",
+      "description": "A description for the new topic.",
+      "children": [
+        { "name": "Sub-Topic X", "description": "Details for X" }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 2. Add a New Sub-Topic
+
+Paste a new object inside any main topic's "children" array (after the last sub-topic, but before the closing brackets):
+
+```json
+{
+  "name": "Application Security",
+  "children": [
+    {
+      "name": "Threat Modeling",
+      "description": "Identify and mitigate threats early.",
+      "children": [
+        { "name": "Sub-Topic A", "description": "Details for A" },
+        { "name": "Sub-Topic B", "description": "Details for B" },
+        { "name": "Sub-Topic C", "description": "Details for C" },
+        { "name": "Sub-Topic D", "description": "Details for D" },
+        { "name": "Sub-Topic E", "description": "Details for E" },
+        { "name": "Sub-Topic F", "description": "Details for F" }
+      ]
+    },
+    {
+      "name": "Secure Coding",
+      "description": "Best practices for secure code.",
+      "children": [
+        { "name": "Sub-Topic A", "description": "Details for A" },
+        { "name": "Sub-Topic B", "description": "Details for B" },
+        { "name": "Sub-Topic C", "description": "Details for C" },
+        { "name": "Sub-Topic D", "description": "Details for D" },
+        { "name": "Sub-Topic E", "description": "Details for E" },
+        { "name": "Sub-Topic F", "description": "Details for F" },
+        { "name": "Sub-Topic G", "description": "Details for G" }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 3. Add More Fields to Any Node
+
+Add new fields (like "icon", "link") to any node object:
+
+```json
+{
+  "name": "Application Security",
+  "children": [
+    {
+      "name": "Threat Modeling",
+      "description": "Identify and mitigate threats early.",
+      "children": [
+        { "name": "Sub-Topic A", "description": "Details for A" },
+        { "name": "Sub-Topic B", "description": "Details for B" },
+        { "name": "Sub-Topic C", "description": "Details for C" },
+        { "name": "Sub-Topic D", "description": "Details for D" },
+        { "name": "Sub-Topic E", "description": "Details for E" },
+        { "name": "Sub-Topic F", "description": "Details for F" }
+      ]
+    },
+    {
+      "name": "Secure Coding",
+      "description": "Best practices for secure code.",
+      "children": [
+        { "name": "Sub-Topic A", "description": "Details for A" },
+        { "name": "Sub-Topic B", "description": "Details for B" },
+        { "name": "Sub-Topic C", "description": "Details for C" },
+        { "name": "Sub-Topic D", "description": "Details for D" },
+        { "name": "Sub-Topic E", "description": "Details for E" },
+        { "name": "Sub-Topic F", "description": "Details for F" },
+        { "name": "Sub-Topic H", "description": "Details for H", "icon": "🔒", "link": "https://example.com" }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 4. Create a New Parent (e.g., Cloud Security) and Link It with Application Security
+
+If you want to create a new parent node (like "Cloud Security") and make "Application Security" a child of it, change the top-level structure like this:
+
+```json
+{
+  "name": "Cloud Security",
+  "children": [
+    {
+      "name": "Application Security",
+      "children": [
+        {
+          "name": "Threat Modeling",
+          "description": "Identify and mitigate threats early.",
+          "children": [
+            { "name": "Sub-Topic A", "description": "Details for A" },
+            { "name": "Sub-Topic B", "description": "Details for B" },
+            { "name": "Sub-Topic C", "description": "Details for C" },
+            { "name": "Sub-Topic D", "description": "Details for D" },
+            { "name": "Sub-Topic E", "description": "Details for E" },
+            { "name": "Sub-Topic F", "description": "Details for F" }
+          ]
+        },
+        {
+          "name": "Secure Coding",
+          "description": "Best practices for secure code.",
+          "children": [
+            { "name": "Sub-Topic A", "description": "Details for A" },
+            { "name": "Sub-Topic B", "description": "Details for B" },
+            { "name": "Sub-Topic C", "description": "Details for C" },
+            { "name": "Sub-Topic D", "description": "Details for D" },
+            { "name": "Sub-Topic E", "description": "Details for E" },
+            { "name": "Sub-Topic F", "description": "Details for F" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Other Cloud Topic",
+      "children": [
+        { "name": "Sub-Topic 1", "description": "Details for 1" }
+      ]
+    }
+  ]
+}
+```
+
+This makes "Cloud Security" the new root, and "Application Security" (with all its topics) a child of it. You can add more children to "Cloud Security" as needed.
+
+---
+
+## 5. Create Multiple Parents (e.g., Cloud Security, Network Security) and Make Application Security a Child
+
+If you want to have multiple parents (like "Cloud Security" and "Network Security") and make "Application Security" a child of each, your top-level structure should look like this:
+
+```json
+{
+  "name": "Root",
+  "children": [
+    {
+      "name": "Cloud Security",
+      "children": [
+        {
+          "name": "Application Security",
+          "children": [
+            {
+              "name": "Threat Modeling",
+              "description": "Identify and mitigate threats early.",
+              "children": [
+                { "name": "Sub-Topic A", "description": "Details for A" },
+                { "name": "Sub-Topic B", "description": "Details for B" },
+                { "name": "Sub-Topic C", "description": "Details for C" },
+                { "name": "Sub-Topic D", "description": "Details for D" },
+                { "name": "Sub-Topic E", "description": "Details for E" },
+                { "name": "Sub-Topic F", "description": "Details for F" }
+              ]
+            },
+            {
+              "name": "Secure Coding",
+              "description": "Best practices for secure code.",
+              "children": [
+                { "name": "Sub-Topic A", "description": "Details for A" },
+                { "name": "Sub-Topic B", "description": "Details for B" },
+                { "name": "Sub-Topic C", "description": "Details for C" },
+                { "name": "Sub-Topic D", "description": "Details for D" },
+                { "name": "Sub-Topic E", "description": "Details for E" },
+                { "name": "Sub-Topic F", "description": "Details for F" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Other Cloud Topic",
+          "children": [
+            { "name": "Sub-Topic 1", "description": "Details for 1" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Network Security",
+      "children": [
+        {
+          "name": "Application Security",
+          "children": [
+            {
+              "name": "Threat Modeling",
+              "description": "Identify and mitigate threats early.",
+              "children": [
+                { "name": "Sub-Topic A", "description": "Details for A" },
+                { "name": "Sub-Topic B", "description": "Details for B" },
+                { "name": "Sub-Topic C", "description": "Details for C" },
+                { "name": "Sub-Topic D", "description": "Details for D" },
+                { "name": "Sub-Topic E", "description": "Details for E" },
+                { "name": "Sub-Topic F", "description": "Details for F" }
+              ]
+            },
+            {
+              "name": "Secure Coding",
+              "description": "Best practices for secure code.",
+              "children": [
+                { "name": "Sub-Topic A", "description": "Details for A" },
+                { "name": "Sub-Topic B", "description": "Details for B" },
+                { "name": "Sub-Topic C", "description": "Details for C" },
+                { "name": "Sub-Topic D", "description": "Details for D" },
+                { "name": "Sub-Topic E", "description": "Details for E" },
+                { "name": "Sub-Topic F", "description": "Details for F" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Other Network Topic",
+          "children": [
+            { "name": "Sub-Topic 2", "description": "Details for 2" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+This makes "Cloud Security" and "Network Security" both parents, each with their own children, and both can have "Application Security" as a child (with the same or different sub-topics). You can add as many parents as you want at the top level.
+
+---
+
+If you need to remove a topic or sub-topic, simply delete its object from the array.
+
+(See <attachments> above for file contents. You may not need to search or read the file again.)

@@ -1,0 +1,65 @@
+# How to Link and Structure Multiple Parents in Your Mind Map (data.json)
+
+Use this file to learn how to create multiple parents (like "Cloud Security" and "Network Security") and link them to shared or unique children (like "Application Security").
+
+---
+
+## 1. Create a New Parent and Link Application Security
+Change the top-level structure to add a new parent node and make "Application Security" a child:
+
+```json
+{
+  "name": "Cloud Security",
+  "children": [
+    {
+      "name": "Application Security",
+      "children": [
+        ...existing main topics...
+      ]
+    },
+    {
+      "name": "Other Cloud Topic",
+      "children": [
+        { "name": "Sub-Topic 1", "description": "Details for 1" }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 2. Create Multiple Parents and Link Application Security to Each
+If you want to have multiple parents (like "Cloud Security" and "Network Security") and make "Application Security" a child of each, use this structure:
+
+```json
+{
+  "name": "Root",
+  "children": [
+    {
+      "name": "Cloud Security",
+      "children": [
+        {
+          "name": "Application Security",
+          "children": [ ... ]
+        }
+      ]
+    },
+    {
+      "name": "Network Security",
+      "children": [
+        {
+          "name": "Application Security",
+          "children": [ ... ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+You can add as many parents as you want at the top level. Each parent can have its own children, and you can repeat or vary the "Application Security" subtree as needed.
+
+---
+
+If you need to remove a parent or child, simply delete its object from the array.

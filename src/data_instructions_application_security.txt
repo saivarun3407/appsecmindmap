@@ -1,0 +1,52 @@
+# How to Edit Topics and Sub-Topics in Application Security (data.json)
+
+Use this file to learn how to add, remove, or edit topics and sub-topics within the "Application Security" section of your mind map.
+
+---
+
+## 1. Add a New Main Topic (under Application Security)
+Paste a new object inside the "children" array of "Application Security" (after the last main topic, but before the closing brackets):
+
+```json
+{
+  "name": "Application Security",
+  "children": [
+    ...existing main topics...
+    {
+      "name": "New Main Topic",
+      "description": "A description for the new topic.",
+      "children": [
+        { "name": "Sub-Topic X", "description": "Details for X" }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 2. Add a New Sub-Topic
+Paste a new object inside any main topic's "children" array (after the last sub-topic, but before the closing brackets):
+
+```json
+{
+  "name": "Threat Modeling",
+  "children": [
+    ...existing sub-topics...
+    { "name": "Sub-Topic G", "description": "Details for G" }
+  ]
+}
+```
+
+---
+
+## 3. Add More Fields to Any Node
+Add new fields (like "icon", "link") to any node object:
+
+```json
+{ "name": "Sub-Topic H", "description": "Details for H", "icon": "🔒", "link": "https://example.com" }
+```
+
+---
+
+If you need to remove a topic or sub-topic, simply delete its object from the array.

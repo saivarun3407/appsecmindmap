@@ -1,0 +1,160 @@
+{
+  "name": "Application Security ",
+  "definition": "Application security (short AppSec) includes all tasks that introduce a secure software development life cycle to development teams. Its final goal is to improve security practices and, through that, to find, fix and preferably prevent security issues within applications. It encompasses the whole application life cycle from requirements analysis, design, implementation, verification as well as maintenance.",
+  "children": [
+    {
+      "name": "Foundational Knowledge",
+      "description": "Become comfortable with basic computing concepts and the command line—the foundation for everything that follows.",
+      "children": [
+        { "name": "Computer Fundamentals", "description": "How a PC boots, CPU vs. RAM vs. storage, files vs. processes." },
+        { "name": "Operating System Basics", "description": "Windows & Linux navigation, file permissions, CLI vs. GUI." },
+        { "name": "Networking 101", "description": "What the internet is, IP addresses, URL vs. DNS, ping & traceroute, OSI Model." },
+        { "name": "Productivity & Documentation", "description": "Markdown, note-taking, keyboard shortcuts, screenshots & screen-recording." },
+        { "name": "Capstone Milestone", "description": "Spin up an Ubuntu VM, create users, set file permissions, write a one-page report on how packets travel during a ping." }
+      ]
+    },
+    {
+      "name": "Programming Foundations",
+      "description": "Learn to automate—vital for testing, parsing logs, and later exploit development.",
+      "children": [
+        { "name": "Python Core", "description": "Variables, loops, functions, error handling, virtual environments." },
+        { "name": "Bash Essentials", "description": "Pipelines, grep/sed/awk, cron jobs, shell variables." },
+        { "name": "Git & Version Control", "description": "git init/clone, branching, pull requests, resolving merge conflicts." },
+        { "name": "Project – Log Analyzer", "description": "Write a Python script that ingests Apache logs and outputs top 10 IPs, paths, and error codes." }
+      ]
+    },
+    {
+      "name": "Web & Software Fundamentals",
+      "description": "Understand how modern apps are built, hosted, and consumed—critical for spotting security flaws later.",
+      "children": [
+        { "name": "Web Stack Basics", "description": "HTML/CSS, HTTP request-response lifecycle, cookies vs. localStorage." },
+        { "name": "Databases 101", "description": "Relational vs. NoSQL, SQL SELECT/INSERT/UPDATE, simple ERDs." },
+        { "name": "Intro to Cloud", "description": "AWS free-tier: EC2, S3, IAM users, security groups." },
+        { "name": "Docker Fundamentals", "description": "Dockerfile, build, run, volumes, Docker Hub." },
+        { "name": "Mini-Project", "description": "Deploy a simple Flask TODO app in a Docker container to AWS Lightsail or EC2." }
+      ]
+    },
+    {
+      "name": "Security Core",
+      "description": "Shift focus from building to breaking and protecting.",
+      "children": [
+        { "name": "Security Mindset & Ethics", "description": "CIA triad, responsible disclosure, safe lab setup." },
+        { "name": "OWASP top 10", "description": "OWASP Top 10: XSS, SQLi, CSRF, IDOR, SSRF, AuthN/AuthZ flaws." },
+        { "name": "Intercepting Proxies", "description": "Burp Suite / OWASP ZAP repeater, intruder, scanner, extensions." },
+        { "name": "Basic Threat Modeling ", "description": "Draw a house floorplan with no windows, doors, or locks. Discuss what threats exist and how adding each element changes the threat landscape. Teaches the basics of threat modeling in a visual, memorable way." },
+        { "name": "Secure Coding Basics", "description": "Input validation, output encoding, parameterised queries." },
+        { "name": "Crypto Fundamentals", "description": "Hash vs. encryption, TLS handshake, JWT signing." },
+        { "name": "Project – Vulnerable Lab Walk-through", "description": "Exploit two OWASP Juice Shop bugs and write remediation guidance." }
+      ]
+    },
+    {
+      "name": "AppSec Engineer",
+      "description": "Operate like a junior-to-mid AppSec engineer embedded with development teams.",
+      "children": [
+        { "name": "Threat Modeling", "description": "Data-flow diagrams, STRIDE, attack trees, misuse cases." },
+        { "name": "Security Architecture", "description": "Zero Trust, defense-in-depth, secure micro-services, secrets management." },
+        { "name": "Static Analysis (SAST)", "description": "Run SAST tools like SonarQube, Semgrep; triage findings." },
+        { "name": "Dynamic Analysis (DAST)", "description": "Run DAST tools like OWASP ZAP; authenticated scans, interpreting results." },
+        { "name": "Software Composition Analysis (SCA)", "description": "SCA tools like OWASP Dependency-Check; license compliance, SBOM basics." },
+        { "name": "Secure SDLC Integration", "description": "Add security gates to GitHub Actions / Jenkins; break-build vs. warn-only modes." },
+        {
+          "name": "CI/CD DevSecOps",
+          "description": "Harden the build pipeline and enforce security from commit to production.",
+          "children": [
+            { "name": "Pipeline Threats Overview", "description": "Poisoned dependencies, malicious commits, compromised runners." },
+            { "name": "Secrets Management", "description": "Vaults, masked variables, short-lived tokens." },
+            { "name": "Pre-Commit & Pre-Push Hooks", "description": "Secret scanning, linters, commit-msg policies." },
+            { "name": "Supply-Chain Scanning", "description": "Run SAST, SCA, IaC and container image scans on every pull request." },
+            { "name": "SBOM & Artifact Signing", "description": "learn what is SBOM and Generate CycloneDX and sign images with Sigstore/Cosign." },
+            { "name": "Release Gates", "description": "Fail or block deploys on critical findings or policy violations." }
+          ]
+        },
+        {
+          "name": "API Security Basics",
+          "description": "Learn about what is an API, how they work, and the common security issues.",
+          "children": [
+            { "name": "OWASP API Top 10", "description": "Injection, BOLA, excessive data exposure, etc." },
+            { "name": "Authentication & Authorization", "description": "OAuth 2.0, OIDC, JWT best practices, audience & scope." },
+            { "name": "API Gateway Policies", "description": "Rate limiting, schema/content validation, threat-intel blocking." },
+            { "name": "Mass Assignment & Validation", "description": "Whitelist binding, payload schema enforcement." },
+            { "name": "API Contract & Fuzz Testing", "description": "OpenAPI / Swagger negative testing, fuzzers." },
+            { "name": "Automated API Testing", "description": "OWASP ZAP API scan, Postman security collections, DAST-for-APIs." }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Senior AppSec Skills",
+      "description": "Move from tester to architect and mentor; drive strategy, automation, and culture change.",
+      "children": [
+        { "name": "Security Architecture", "description": "Zero Trust, defense-in-depth, secure micro-services, secrets management." },
+        { "name": "Cloud Native Security", "description": "CSPM, CIEM, Kubernetes RBAC, podium-level IAM misconfigurations." },
+        { "name": "Risk-Based Programs", "description": "Asset classification, CVSS & EPSS scoring, risk registers." },
+        { "name": "Metrics & KPIs", "description": "MTTR, coverage ratios, risk burn-down charts." },
+        { "name": "Automation at Scale", "description": "Pipeline guardrails, policy-as-code (OPA), auto-merge safe dependency updates." },
+        { "name": "Mentoring & Communication", "description": "Run secure-coding workshops, translate risk to ROI for executives." },
+        { "name": "Compliance Mapping", "description": "OWASP ASVS → ISO 27001 → SOC 2; evidence-collection strategies." },
+        { "name": "Capstone – Secure Launch", "description": "Own end-to-end security for a mock SaaS product: architecture review, SDLC controls, pen-test coordination, executive read-out." }
+      ]
+    },
+    {
+      "name": "Parallel Tracks",
+      "description": "Continuous learning, practice, and networking strands that complement every section.",
+      "children": [
+        {
+          "name": "Community & Networking",
+          "description": "Build relationships and stay current.",
+          "children": [
+            { "name": "Social Platforms", "description": "LinkedIn, Mastodon/Twitter—follow AppSec pros, interact, ask questions." },
+            { "name": "Conferences & Meetups", "description": "OWASP Global AppSec, BSides, DEF CON, local OWASP chapters." }
+          ]
+        },
+        {
+          "name": "Hands-On Practice",
+          "description": "Learn by doing in safe environments.",
+          "children": [
+            { "name": "TryHackMe Paths", "description": "Complete Web Pentester and SOC Analyst paths." },
+            { "name": "Hack The Box", "description": "Target easy → medium → hard web machines." },
+            { "name": "PortSwigger Academy", "description": "Finish all labs up to Advanced." },
+            { "name": "CTF Competitions", "description": "picoCTF, CTFtime weekend events, local university CTFs." }
+          ]
+        },
+        {
+          "name": "Bug Bounty Research",
+          "description": "Study real vulnerabilities and practise responsibly.",
+          "children": [
+            { "name": "Read Bounty Reports", "description": "HackerOne Hacktivity, Bugcrowd Kudos, Intigriti Hall of Fame." },
+            { "name": "Reproduce Disclosures", "description": "Use Juice Shop, DVWA, etc., to replicate disclosed bugs." },
+            { "name": "Write Post-Mortems", "description": "Document repro steps, root cause, and fix." }
+          ]
+        },
+        {
+          "name": "Knowledge Consumption",
+          "description": "Stay sharp with constant reading.",
+          "children": [
+            { "name": "Daily Write-ups", "description": "Follow Medium, DEV, GitHub for fresh AppSec content." },
+            { "name": "Annual Reports", "description": "Verizon DBIR, CrowdStrike Global Threat Report, etc." },
+            { "name": "Newsletters", "description": "TL;DR Sec, Morning Brew Security, SANS NewsBites." }
+          ]
+        },
+        {
+          "name": "Certifications",
+          "description": "Optional milestones to validate knowledge.",
+          "children": [
+            { "name": "CompTIA Security+", "description": "Target after Security Core." },
+            { "name": "eJPT or Burp CP", "description": "After AppSec Engineer Level." },
+            { "name": "OSWE or CSSLP", "description": "After Senior AppSec Skills." }
+          ]
+        },
+        {
+          "name": "Portfolio & Branding",
+          "description": "Showcase your journey.",
+          "children": [
+            { "name": "GitHub Repositories", "description": "Scripts, lab reports, threat models, automation examples." },
+            { "name": "Blog & Talks", "description": "One post per quarter; propose lightning talks at local meetups." }
+          ]
+        }
+      ]
+    }
+  ]
+}

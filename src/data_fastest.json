@@ -1,0 +1,95 @@
+{
+  "name": "Application security (FAST)",
+  "description": "Fastest way to learn web application security and DevSecOps",
+  "children": [
+    {
+      "name": "Foundational Knowledge",
+      "description": "Understand how the internet and modern apps work before touching security.",
+      "children": [
+        { "name": "Internet Fundamentals", "description": "How the Web works, DNS, HTTP request/response, TLS basics." },
+        { "name": "Application Architecture", "description": "Front end ↔ back end ↔ database, build pipelines, cloud hosting, logging." },
+        { "name": "Website Components", "description": "User inputs, cookies & sessions, login/logout, service accounts, DB connections." }
+      ]
+    },
+    {
+      "name": "Security Basics",
+      "description": "Learn core vulnerabilities and the must-have tooling.",
+      "children": [
+        { "name": "OWASP Top 10", "description": "High-level overview of SQLi, XSS, IDOR, BAC, Command-i, etc., plus mitigations." },
+        { "name": "Burp Suite", "description": "Proxy, Repeater, Intruder, extensions; decode & tamper JWTs with jwt.io." }
+      ]
+    },
+    {
+      "name": "Web App Security",
+      "description": "Hands-on exploitation and defence of the most common web flaws.",
+      "children": [
+        { "name": "SQL Injection", "description": "Use sqlmap, understand prepared statements & ORM protections." },
+        { "name": "Cross-Site Scripting", "description": "Reflected, stored, DOM; defend with output encoding & CSP." },
+        { "name": "CSRF", "description": "Synchroniser tokens, SameSite cookies, double-submit patterns." },
+        { "name": "Command Injection", "description": "Detect unsanitised system calls; mitigate with whitelists & exec wrappers." },
+        { "name": "File Upload Abuse", "description": "Bypass file-type filters; defend with MIME checks & AV scanning." }
+      ]
+    },
+    {
+      "name": "Identity & Access",
+      "description": "Control who can do what—and break weak implementations.",
+      "children": [
+        { "name": "AuthN vs. AuthZ", "description": "OAuth2/OIDC flows, JWT claims, RBAC vs. ABAC." },
+        { "name": "IDOR & Rate Limiting", "description": "Find insecure object references, fuzz IDs, test throttling controls." }
+      ]
+    },
+    {
+      "name": "Hands-On Practice",
+      "description": "Prove skills on safe playgrounds and real code.",
+      "children": [
+        { "name": "PortSwigger Labs", "description": "Complete some Web Security Academy fundamentals & practitioner labs." },
+        { "name": "Build & Host App", "description": "Generate a Flask/Node demo with ChatGPT and deploy to Render/Fly.io." }
+      ]
+    },
+    {
+      "name": "Automation & DevOps",
+      "description": "Bring security into version control and pipelines.",
+      "children": [
+        { "name": "GitHub Automation", "description": "Clone → branch → PR; add Actions with Semgrep SAST & secret-scanning, triage findings." },
+        {
+          "name": "CI/CD DevSecOps",
+          "description": "Harden builds and fail deployments on critical issues.",
+          "children": [
+            { "name": "Pipeline Threats", "description": "Poisoned dependencies, malicious commits, compromised runners." },
+            { "name": "Secrets Management", "description": "Vaults, masked vars, short-lived tokens." },
+            { "name": "Pre-Commit Hooks", "description": "Secrets scanning, linters, commit-msg policies." },
+            { "name": "Supply-Chain Scans", "description": "Run SAST, SCA, IaC & container scans on every PR." },
+            { "name": "SBOM & Signing", "description": "Generate CycloneDX and sign images with Sigstore/Cosign." },
+            { "name": "Release Gates", "description": "Block deploys on critical findings." }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Secure SDLC",
+      "description": "Embed security across the software-delivery lifecycle.",
+      "children": [
+        { "name": "SSDLC Phases", "description": "Plan → Design → Build → Test → Release → Operate → Retire, with mapped controls." },
+        { "name": "Testing Ecosystem", "description": "What SAST, DAST, and SCA do; open-source supply chain & SBOM basics." },
+        { "name": "Container Security", "description": "Write Dockerfile, push image, scan with Trivy/Grype." }
+      ]
+    },
+    {
+      "name": "Threat Modeling",
+      "description": "Think like an attacker before code is written.",
+      "children": [
+        { "name": "House-Plan Exercise", "description": "Ask: What is it? What could go wrong? What will we do? Apply to your house plan, without doors, locks and windows." },
+        { "name": "Cheat-Sheet Mitigations", "description": "Use OWASP cheat-sheets for validation, encoding, CSP, rate-limiting." }
+      ]
+    },
+    {
+      "name": "Continuous Learning",
+      "description": "Stay current and build reputation.",
+      "children": [
+        { "name": "Bug-Bounty Write-Ups", "description": "Read HackerOne Hacktivity, Bugcrowd Kudos, Intigriti disclosures daily." },
+        { "name": "Security Blogs & Reports", "description": "Follow TL;DR Sec, breach post-mortems, Verizon DBIR." },
+        { "name": "Networking & Meetups", "description": "Engage on LinkedIn, join OWASP chapters, CTFs, BSides events." }
+      ]
+    }
+  ]
+}
